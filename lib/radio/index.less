@@ -1,0 +1,36 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-radio-list{
+    padding: 30px;
+
+    .am-radio-wrapper{
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      font-size: @font-size-caption;
+      color: @color-text-caption;
+
+      &.zp-radio-checked{
+        color: @color-text-base;
+      }
+    }
+
+    .am-radio {
+      border: @border-width-sm solid @border-color-base;
+      border-radius: 50%;
+      margin-right: 15px;
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+
+      &.am-radio-checked{
+        border: 6px solid @brand-primary;
+      }
+    }
+
+    .am-radio-inner{
+      display: none;
+    }
+  }
+}

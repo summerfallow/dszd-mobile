@@ -1,0 +1,96 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-listView{
+    height: 100%;
+
+    .am-icon-loading{
+      width: 40px;
+      height: 40px;
+      border: 2px solid #999;
+      border-left: 2 px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-radius: 50%;
+
+      use{
+        display: none;
+      }
+    }
+
+    .am-list-header{
+      padding: 0;
+      display: block;
+    }
+
+    .am-list-view-scrollview{
+      height: 100%;
+    }
+
+    .am-list-body{
+      border: 0;
+
+      &:after{
+        border-bottom: 0;
+      }
+    }
+
+    .list-view-section-body{
+      overflow: hidden;
+    }
+
+    //下拉刷新
+    .am-refresh-control-ptr{
+      height: 0.7rem;
+      margin-top: -0.7rem;
+    }
+
+    //下拉刷新
+    .am-refresh-control-pull,
+    .am-refresh-control-release{
+      font-size: 28px;
+    }
+
+    .am-list-footer{
+      padding: 60px 40px;
+    }
+  }
+}
+
+.listView-content,
+.listView-empty{
+  position:  absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.indexed-list{
+  position: relative;
+  height: 100%;
+  overflow: auto;
+
+  .indexed-title{
+    padding: 14px @h-spacing-lg;
+    line-height: @line-height-paragraph;
+    background: #f5f5f5;
+    font-size: @font-size-base;
+    color: @color-text-caption;
+  }
+
+  :global{
+    .am-indexed-list-container,
+    .am-indexed-list{
+      height: 100%;
+    }
+
+    .am-indexed-list-quick-search-bar{
+      top: 50%;
+      transform: translate(0, -50%);
+
+      li{
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-side-bar{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .zp-side-bar-nav{
+    margin-right: @h-spacing-sm;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    -webkit-overflow-scrolling : touch;
+    overflow: auto;
+
+    li{
+      flex-shrink: 0;
+      position: relative;
+      background: #fff;
+      height: 88px;
+      line-height: 88px;
+      text-align: center;
+      border-bottom: @border-width-sm solid @border-color-base;
+      color: @color-text-base;
+      font-size: @font-size-caption;
+
+      &:last-child{
+        flex: 1;
+        border-bottom: 0;
+      }
+
+      &.selected{
+        color: @brand-primary;
+        background: none;
+
+        &:after{
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          background: @brand-primary;
+          width: 4px;
+        }
+      }
+
+      span{
+        display: block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .zp-side-bar-content{
+    flex: 1;
+    position: relative;
+  }
+}
+
+.zp-side-bar{
+  display: block;
+}

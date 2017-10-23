@@ -1,0 +1,48 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-btn-submit{
+    &.am-button{
+      font-size: @font-size-caption;
+
+      &.none{
+        background-color: transparent;
+        border: 0;
+      }
+
+      .am-icon-loading{
+        width: 30px;
+        height: 30px;
+        border: 2px solid #fff;
+        border-left: 2 px solid transparent;
+        border-bottom: 2px solid transparent;
+        border-radius: 50%;
+
+        use{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .zp-button-back{
+    position: relative;
+    width: 58px;
+    height: 58px;
+    background: @fill-mask;
+    border-radius: 50%;
+
+    &:after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -14px;
+      margin-top: -18px;
+      width: 20px;
+      height: 36px;
+      background: url("../button/images/icon_go_back.png") no-repeat;
+      background-size: 20px;
+    }
+  }
+}

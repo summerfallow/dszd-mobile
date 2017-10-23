@@ -1,0 +1,57 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-card-header{
+    position: relative;
+    line-height: 88px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 @v-spacing-md;
+
+    &:after{
+      content: '';
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      border-bottom: @border-width-sm solid @border-color-base;
+    }
+
+    .card-title{
+      font-size: @font-size-heading;
+      color: @color-text-paragraph;
+    }
+
+    .card-extra{
+      margin-left: @v-spacing-md;;
+      font-size: @font-size-caption-sm;
+      color: @color-text-caption;
+    }
+
+    .card-info{
+      position: absolute;
+      bottom: 0;
+      right: 50px;
+      margin-left: @v-spacing-md;;
+      font-size: @font-size-caption;
+      color: #999;
+    }
+
+    .card-ctrl{
+      width: 50px;
+      height: 50px;
+      background-image: url("../styles/images/icon/card_right.png");
+      background-size: 18px 30px;
+      background-position: right center;
+      background-repeat: no-repeat;
+
+      &.active {
+        background-image: url("../styles/images/icon/card_down.png");
+        background-size: 30px 16px;
+      }
+    }
+  }
+}

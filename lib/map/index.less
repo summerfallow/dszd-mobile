@@ -1,0 +1,102 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-map{
+    min-height: 500px;
+
+    .anchorBL{
+      display: none;
+    }
+
+    .map-label{
+      height: 85px;
+      position: absolute;
+      transform: translate(-50%, -85px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      &.position{
+        .label-name{
+          color: #fff;
+          background: #fb4b4b;
+
+          &:after{
+            border-top: 10px solid #fb4b4b;
+            z-index: 999;
+          }
+        }
+
+        .label-marker{
+          width: 22px;
+          height: 22px;
+          background: #fff;
+          border: 5px solid #fb4b4b;
+          border-radius: 50%;
+        }
+      }
+
+      .label-name {
+        position: relative;
+        color: #2491ee;;
+        background: #fff;
+        padding: 4px 10px;
+        box-shadow:0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 0px;
+        max-width: 450px;
+        display: flex;
+        overflow: hidden;
+
+        .label-text {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .label-extra {
+          flex-shrink: 0;
+        }
+
+        &:after{
+          content: '';
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          margin-left: -10px;
+          width: 0;
+          height: 0;
+          border-top: 10px solid #fff;
+          border-right: 10px solid transparent;
+          border-left: 10px solid transparent;
+        }
+      }
+
+      .label-marker{
+        width: 20px;
+        height: 24px;
+        background: url(../map/images/marker1.png);
+        background-size: cover;
+      }
+    }
+  }
+
+  .zp-map-input{
+    height: 500px;
+    overflow: hidden;
+
+    .am-list-item{
+      .am-input-extra{
+        padding: 0 20px;
+        height: 50px;
+        max-height: 50px;
+        line-height: 50px;
+        background: @brand-primary;
+        color: #fff;
+        text-align: center;
+        font-size: @font-size-caption-sm;
+        border-radius: 3PX;
+      }
+    }
+  }
+}

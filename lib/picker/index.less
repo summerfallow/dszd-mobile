@@ -1,0 +1,28 @@
+.picker{
+  overflow: hidden;
+  display: inline-block;
+  line-height: 90px;
+}
+
+.picker-item{
+  position: relative;
+  padding: 0 25px 0 0;
+  color: #888;
+  font-size: 28px;
+
+  span{
+    color: #333;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 20px;
+    height: 10px;
+    background: url("../styles/images/icon/filter_down.png") no-repeat center;
+    background-size: cover;
+  }
+}

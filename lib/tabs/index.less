@@ -1,0 +1,48 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-tab-nav{
+    display: flex;
+
+    .zp-tab-nav-item{
+      position: relative;
+      flex: 1;
+      line-height: 80px;
+      background: #fff;
+      text-align: center;
+      color: @color-text-caption;
+      font-size: @font-size-heading;
+
+      &.selected{
+        color: @brand-primary;
+
+        &:after{
+          position: absolute;
+          content: '';
+          height: 4px;
+          width: 100%;
+          background: @brand-primary;
+          left: 0;
+          bottom: 0;
+        }
+      }
+
+      &:before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        border-bottom: @border-width-sm solid @border-color-base;
+      }
+    }
+  }
+
+  .zp-tab-pane{
+    display: none;
+
+    &.selected{
+      display: block;
+    }
+  }
+}

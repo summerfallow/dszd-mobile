@@ -1,0 +1,90 @@
+// 覆盖antd-mobile样式
+:global {
+  .zp-app{
+    .slider-decorator-0{
+      width: 100%;
+    }
+    .am-list-body{
+      background: none;
+    }
+
+    //搜索栏样式
+    .am-search-input{
+      background:rgba(3, 3, 3, 0.1);
+
+      input[type="search"]{
+        color: #7a797b;
+      }
+
+      //隐藏清楚按钮
+      .am-search-clear{
+        display: none;
+      }
+    }
+
+    //动作面板
+    .am-action-sheet{
+      background: none;
+
+      .am-action-sheet-button-list{
+        padding: 20px;
+      }
+
+      .am-action-sheet-button-list-item{
+        background: #fff;
+        border-radius: 10px;
+        border: 0;
+      }
+
+      .am-action-sheet-cancel-button-mask{
+        display: none;
+      }
+    }
+
+    //设置切换样式
+    .am-tab-bar{
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      .am-tab-bar-content {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 100px;
+        -webkit-overflow-scrolling : touch;
+        overflow: auto;
+
+        .am-tab-bar-tabpane {
+          overflow: inherit;
+          height: 100%;
+        }
+      }
+    }
+
+    .am-tab-bar-bar{
+      z-index: 98;
+    }
+
+    //设置tab样式
+    .am-tabs{
+      overflow: visible;
+
+      .am-tabs-tabpane{
+        overflow: visible;
+      }
+    }
+
+    //头部title
+    .am-navbar-title{
+      flex: 2;
+    }
+
+    .vc-log{
+      padding-bottom: 0.8rem;
+    }
+  }
+}

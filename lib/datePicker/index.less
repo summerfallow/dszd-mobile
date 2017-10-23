@@ -1,0 +1,37 @@
+.range-picker{
+  overflow: hidden;
+  line-height: 90px;
+  display: inline-block;
+
+  > div, > span{
+    float: left;
+  }
+}
+
+.range-picker-block {
+  color: #333;
+  padding: 0 15px;
+}
+
+.range-picker-item{
+  position: relative;
+  padding: 0 25px 0 0;
+  color: #888;
+  font-size: 28px;
+
+  span{
+    color: #333;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -5px;
+    width: 20px;
+    height: 10px;
+    background: url("../styles/images/icon/filter_down.png") no-repeat center;
+    background-size: cover;
+  }
+}

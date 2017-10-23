@@ -1,0 +1,73 @@
+@import "~antd-mobile/lib/style/themes/default.less";
+
+:global{
+  .zp-table{
+    overflow: hidden;
+    background:#fff;
+    border-bottom: @border-width-sm solid @border-color-base;
+
+    .table-content{
+      padding: 0 20px;
+    }
+
+    .table-row{
+      display: flex;
+      border-bottom: @border-width-sm solid @border-color-base;
+
+      &:last-child{
+        border: none;
+      }
+    }
+
+    .table-row-item{
+      display: flex;
+      flex: 1;
+      //float: left;
+      padding: 20px 0;
+      overflow: hidden;
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    .table-row-item-name{
+      //float: left;
+      //width: 100px;
+      width: 150px;
+      flex-shrink: 0;
+      color: #999;
+
+      .skeleton-middle{
+        width: 120px;
+      }
+    }
+
+    .table-row-item-value{
+      color: #333;
+      word-break: break-all;
+
+      .skeleton-large{
+        width: 180px;
+      }
+    }
+
+    //.row-1{
+    //  .table-row-item-name{
+    //    width: 20%;
+    //  }
+    //
+    //  .table-row-item-value{
+    //    width: 80%;
+    //  }
+    //}
+
+    //.row-2{
+    //  .table-row-item-name{
+    //    width: 40%;
+    //  }
+    //
+    //  .table-row-item-value{
+    //    width: 60%;
+    //  }
+    //}
+  }
+}
